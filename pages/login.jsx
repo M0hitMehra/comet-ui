@@ -32,7 +32,7 @@ const login = () => {
         console.log("Login successful:", response.data);
         localStorage.setItem('email',email.toLocaleLowerCase());
         localStorage.setItem('token',response.data.token);
-        router.push('/home');
+        
       } else {
         console.error("Login failed:", response.data);
         alert("Login failed");
@@ -119,7 +119,7 @@ const login = () => {
           </div>
           <div className="mt-3"  onClick={()=>{
             console.log("hello guys router to navigate to the signup")
-            router.push('/create-account')}}>
+            router.push('/signup')}}>
             Don’t have an account? <span className="text-[#c02252] cursor-pointer" > Create Account</span>
           </div>
         </div>

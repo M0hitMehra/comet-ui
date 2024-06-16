@@ -112,14 +112,8 @@ localStorage.setItem('token',response.data.token)
         // console.log(isprofile + 'this is my isprofile');
 
         // handleCondNavigate();  
-        if(isBrand =="true"){
-          
-          router.push('/complete-profile-brands');
-        }
-        else{
-  router.push('/complete-profile-user');
-
-        }
+      
+     
 
       } else {
         console.error('Registration failed:', response.data);
