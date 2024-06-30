@@ -268,7 +268,7 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar className='bg-slate-800' component="nav">
+            <AppBar className='bg-black' component="nav">
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -316,18 +316,6 @@ function DrawerAppBar(props) {
                     {drawer}
                 </Drawer>
             </nav>
-            
-            <div className=' bg-white h-screen w-screen flex justify-center items-center'
-            style={{
-                backgroundImage: `url('https://img.freepik.com/free-vector/watercolor-galaxy-background_23-2149225176.jpg?w=1380&t=st=1719050006~exp=1719050606~hmac=cccf9a4f729a8fdac95244b502b84eb9759bee735deff587aec915035631d845')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-                <div className='  text-black'>
-                    hello
-                </div>
-            </div>
 
 
 
