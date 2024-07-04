@@ -4,6 +4,9 @@ import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
 import DrawerAppBar from "../home/page";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import TaskAltIcon from "@mui/icons-material/TaskAlt";
 
 const MainPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -18,8 +21,8 @@ const MainPage = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    // slidesToShow: 1,
-    // slidesToScroll: 3,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     // lazyLoad: true,
     // autoplay: true,
     // autoplaySpeed: 2000
@@ -495,90 +498,101 @@ const MainPage = () => {
             </Grid>
           </Grid>
         </Box>
-
-        {/* <Box sx={{ width: '50%', my: 4 }}>
-      <Slider {...settings}>
-        <Box
-          component="img"
-          src="https://th.bing.com/th/id/OIP.urA1OQAvQeHrnmTB7e_o3AHaE7?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-          alt="Image 1"
-          sx={{
-            width: "400px",
-            height: "300px",
-            borderRadius: "30px",
-            boxShadow: 2,
-            margin: 2,
-          }}
-        />
-        <Box
-          component="img"
-          src="https://th.bing.com/th/id/OIP.AQWbN0mvvCj_T-QNxndQAgHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-          alt="Image 2"
-          sx={{
-            width: "400px",
-            height: "300px",
-            borderRadius: "30px",
-            boxShadow: 2,
-            margin: 2,
-          }}
-        />
-        <Box
-          component="img"
-          src="https://th.bing.com/th/id/OIP.PyFNiTk-edap7LADnaw9IQHaEA?w=298&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-          alt="Image 3"
-          sx={{
-            width: "400px",
-            height: "300px",
-            borderRadius: "30px",
-            boxShadow: 2,
-            margin: 2,
-          }}
-        />
-        <Box
-          component="img"
-          src="https://th.bing.com/th/id/OIP.upVp_8A0fM4h63Ds_jE57AHaEL?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-          alt="Image 4"
-          sx={{
-            width: "400px",
-            height: "300px",
-            borderRadius: "30px",
-            boxShadow: 2,
-            margin: 2,
-          }}
-        />
-        <Box
-          component="img"
-          src="https://th.bing.com/th/id/OIP.A-_MbAsFQhWV_KdZ9xPUjAHaFH?w=249&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-          alt="Image 5"
-          sx={{
-            width: "400px",
-            height: "300px",
-            borderRadius: "30px",
-            boxShadow: 2,
-            margin: 2,
-          }}
-        />
-        <Box
-          component="img"
-          src="https://th.bing.com/th/id/OIP.PyFNiTk-edap7LADnaw9IQHaEA?w=298&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-          alt="Image 6"
-          sx={{
-            width: "400px",
-            height: "300px",
-            borderRadius: "30px",
-            boxShadow: 2,
-            margin: 2,
-          }}
-        />
-      </Slider>
-    </Box> */}
+        <Box sx={{ width: "100%", my: 4 }}>
+          <Slider {...settings}>
+            <Box mx={1}>
+              <Box
+                component="img"
+                src="https://th.bing.com/th/id/OIP.urA1OQAvQeHrnmTB7e_o3AHaE7?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="Image 1"
+                sx={{
+                  width: "400px",
+                  height: "300px",
+                  borderRadius: "30px",
+                  boxShadow: 2,
+                  marginLeft: "24px",
+                }}
+              />
+            </Box>
+            <Box mx={1}>
+              <Box
+                component="img"
+                src="https://th.bing.com/th/id/OIP.AQWbN0mvvCj_T-QNxndQAgHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="Image 2"
+                sx={{
+                  width: "400px",
+                  height: "300px",
+                  borderRadius: "30px",
+                  boxShadow: 2,
+                  marginLeft: "24px",
+                }}
+              />
+            </Box>
+            <Box mx={1}>
+              <Box
+                component="img"
+                src="https://th.bing.com/th/id/OIP.PyFNiTk-edap7LADnaw9IQHaEA?w=298&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="Image 3"
+                sx={{
+                  width: "400px",
+                  height: "300px",
+                  borderRadius: "30px",
+                  boxShadow: 2,
+                  marginLeft: "24px",
+                }}
+              />
+            </Box>
+            <Box mx={1}>
+              <Box
+                component="img"
+                src="https://th.bing.com/th/id/OIP.upVp_8A0fM4h63Ds_jE57AHaEL?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="Image 4"
+                sx={{
+                  width: "400px",
+                  height: "300px",
+                  borderRadius: "30px",
+                  boxShadow: 2,
+                  marginLeft: "24px",
+                }}
+              />
+            </Box>
+            <Box mx={1}>
+              <Box
+                component="img"
+                src="https://th.bing.com/th/id/OIP.A-_MbAsFQhWV_KdZ9xPUjAHaFH?w=249&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="Image 5"
+                sx={{
+                  width: "400px",
+                  height: "300px",
+                  borderRadius: "30px",
+                  boxShadow: 2,
+                  marginLeft: "24px",
+                }}
+              />
+            </Box>
+            <Box mx={1}>
+              <Box
+                component="img"
+                src="https://th.bing.com/th/id/OIP.PyFNiTk-edap7LADnaw9IQHaEA?w=298&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="Image 6"
+                sx={{
+                  width: "400px",
+                  height: "300px",
+                  borderRadius: "30px",
+                  boxShadow: 2,
+                  marginLeft: "24px",
+                }}
+              />
+            </Box>
+          </Slider>
+        </Box>
         <Box
           style={{
             backgroundColor: "black",
             borderRadius: "12px",
             padding: 12,
           }}
-          mt={2}
+          my={6}
           mx={4}
         >
           <Grid container>
@@ -652,31 +666,31 @@ const MainPage = () => {
         </Box>
         <Box my={6} mx={5}>
           <Grid container spacing={2}>
-          <Grid xs={6} sm={6} md={6} lg={6} xl={6}>
-            <Typography fontWeight="bold" fontSize={20}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </Typography>
-          </Grid>
-          <Grid xs={6} sm={6} md={6} lg={6} xl={6}>
-            <Typography
-              color="black"
-              sx={{
-                border: "1px solid black",
-                borderRadius: "50px",
-                padding: "12px",
-                textAlign: "center",
-              }}
-            >
-              sdfejkr
-            </Typography>
-          </Grid>
+            <Grid xs={6} sm={6} md={6} lg={6} xl={6}>
+              <Typography fontWeight="bold" fontSize={20}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </Typography>
+            </Grid>
+            <Grid xs={6} sm={6} md={6} lg={6} xl={6}>
+              <Typography
+                color="black"
+                sx={{
+                  border: "1px solid black",
+                  borderRadius: "50px",
+                  padding: "12px",
+                  textAlign: "center",
+                }}
+              >
+                sdfejkr
+              </Typography>
+            </Grid>
           </Grid>
         </Box>
         <Box mx={5}>
           <Grid container spacing={2}>
-          <Grid xs={12} sm={12} md={8} lg={8} xl={8}>
-           <Paper elevation={3} style={{ borderRadius: '24px' }}>
-           <Box
+            <Grid xs={12} sm={12} md={8} lg={8} xl={8}>
+              <Paper elevation={3} style={{ borderRadius: "24px" }}>
+                <Box
                   component="img"
                   src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
                   alt="Example"
@@ -689,12 +703,19 @@ const MainPage = () => {
                     // Add other styles as needed
                   }}
                 />
-                <Typography fontWeight="bold" fontSize={20} p={2}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, consequatur cum. Obcaecati, vel. Magni necessitatibus aspernatur voluptate dolor totam culpa.</Typography>
-           </Paper>
-          </Grid>
-          <Grid xs={12} sm={12} md={12} lg={4} xl={4} px={2}>
-           <Paper elevation={3} style={{ borderRadius: '24px', marginBottom: '12px' }}>
-           <Box
+                <Typography fontWeight="bold" fontSize={20} p={2}>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Eaque, consequatur cum. Obcaecati, vel. Magni necessitatibus
+                  aspernatur voluptate dolor totam culpa.
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={12} lg={4} xl={4} px={2}>
+              <Paper
+                elevation={3}
+                style={{ borderRadius: "24px", marginBottom: "12px" }}
+              >
+                <Box
                   component="img"
                   src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
                   alt="Example"
@@ -707,10 +728,13 @@ const MainPage = () => {
                     // Add other styles as needed
                   }}
                 />
-                <Typography fontWeight="bold" fontSize={20} p={2}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, quisquam.</Typography>
-           </Paper>
-           <Paper elevation={3} style={{ borderRadius: '24px' }}>
-           <Box
+                <Typography fontWeight="bold" fontSize={20} p={2}>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Accusantium, quisquam.
+                </Typography>
+              </Paper>
+              <Paper elevation={3} style={{ borderRadius: "24px" }}>
+                <Box
                   component="img"
                   src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
                   alt="Example"
@@ -723,11 +747,63 @@ const MainPage = () => {
                     // Add other styles as needed
                   }}
                 />
-                <Typography fontWeight="bold" fontSize={20} p={2}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, quisquam.</Typography>
-           </Paper>
-          </Grid>
+                <Typography fontWeight="bold" fontSize={20} p={2}>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Accusantium, quisquam.
+                </Typography>
+              </Paper>
+            </Grid>
           </Grid>
         </Box>
+        {/* <Box my={6} mx={4}>
+          <Paper elevation={3} sx={{ borderRadius: "12px" }}>
+            <Grid container spacing={3}>
+              <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
+                Do I Qualify?
+              </Grid>
+              <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
+                <Paper
+                  elevation={3}
+                  sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                  p={2}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <TaskAltIcon />
+                    <Typography sx={{ marginLeft: "4px" }}>
+                      Lorem ipsum dolor sit.
+                    </Typography>
+                  </Box>
+                </Paper>
+              </Grid>
+              <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
+                <Paper
+                  elevation={3}
+                  sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                  p={2}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <TaskAltIcon />
+                    <Typography sx={{ marginLeft: "4px" }}>
+                      Lorem ipsum dolor sit.
+                    </Typography>
+                  </Box>
+                </Paper>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Box> */}
       </Box>
     </>
   );
