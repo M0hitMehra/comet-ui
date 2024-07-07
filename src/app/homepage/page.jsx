@@ -1,12 +1,16 @@
 "use client";
 import TimelineComponent from "@/components/TimeLinecomponent";
-import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Divider, Grid, Paper, Stack, Typography } from "@mui/material";
 import DrawerAppBar from "../home/page";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
+import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import EmailIcon from "@mui/icons-material/Email";
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const MainPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -23,9 +27,9 @@ const MainPage = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // lazyLoad: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000
+    lazyLoad: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   // const settings = {
@@ -59,7 +63,11 @@ const MainPage = () => {
         }}
       >
         <Box
-          style={{ backgroundColor: "black", padding: "60px 80px 0px 80px " }}
+          style={{
+            backgroundColor: "black",
+            padding: "60px 80px 0px 80px ",
+            borderBottomLeftRadius: "60px",
+          }}
         >
           <h1 style={{ color: "white" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
@@ -755,13 +763,15 @@ const MainPage = () => {
             </Grid>
           </Grid>
         </Box>
-        {/* <Box my={6} mx={4}>
+        <Box my={6} mx={4} alignItems="center">
           <Paper elevation={3} sx={{ borderRadius: "12px" }}>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} px={6} py={2}>
               <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
-                Do I Qualify?
+                <Typography fontSize={20} fontWeight="bold" mt={2}>
+                  Do I Qualify?
+                </Typography>
               </Grid>
-              <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
+              <Grid xs={12} sm={12} md={4} lg={4} xl={4} px={2}>
                 <Paper
                   elevation={3}
                   sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
@@ -773,6 +783,8 @@ const MainPage = () => {
                       flexDirection: "row",
                       alignItems: "center",
                     }}
+                    px={4}
+                    py={2}
                   >
                     <TaskAltIcon />
                     <Typography sx={{ marginLeft: "4px" }}>
@@ -781,7 +793,30 @@ const MainPage = () => {
                   </Box>
                 </Paper>
               </Grid>
-              <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
+              <Grid xs={12} sm={12} md={4} lg={4} xl={4} px={2}>
+                <Paper
+                  elevation={3}
+                  sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                    py={2}
+                    px={4}
+                  >
+                    <TaskAltIcon />
+                    <Typography sx={{ marginLeft: "4px" }}>
+                      Lorem ipsum dolor sit.
+                    </Typography>
+                  </Box>
+                </Paper>
+              </Grid>
+            </Grid>
+            <Grid container spacing={3} px={6} py={2} mt={1}>
+              <Grid xs={12} sm={12} md={3} lg={3} xl={3} px={3}>
                 <Paper
                   elevation={3}
                   sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
@@ -793,6 +828,71 @@ const MainPage = () => {
                       flexDirection: "row",
                       alignItems: "center",
                     }}
+                    px={4}
+                    py={2}
+                  >
+                    <TaskAltIcon />
+                    <Typography sx={{ marginLeft: "4px" }}>
+                      Lorem ipsum dolor sit.
+                    </Typography>
+                  </Box>
+                </Paper>
+              </Grid>
+              <Grid xs={12} sm={12} md={3} lg={3} xl={3} px={3}>
+                <Paper
+                  elevation={3}
+                  sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                    py={2}
+                    px={4}
+                  >
+                    <TaskAltIcon />
+                    <Typography sx={{ marginLeft: "4px" }}>
+                      Lorem ipsum dolor sit.
+                    </Typography>
+                  </Box>
+                </Paper>
+              </Grid>
+              <Grid xs={12} sm={12} md={3} lg={3} xl={3} px={3}>
+                <Paper
+                  elevation={3}
+                  sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                    py={2}
+                    px={4}
+                  >
+                    <TaskAltIcon />
+                    <Typography sx={{ marginLeft: "4px" }}>
+                      Lorem ipsum dolor sit.
+                    </Typography>
+                  </Box>
+                </Paper>
+              </Grid>
+              <Grid xs={12} sm={12} md={3} lg={3} xl={3} px={3}>
+                <Paper
+                  elevation={3}
+                  sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                    py={2}
+                    px={4}
                   >
                     <TaskAltIcon />
                     <Typography sx={{ marginLeft: "4px" }}>
@@ -803,7 +903,1513 @@ const MainPage = () => {
               </Grid>
             </Grid>
           </Paper>
-        </Box> */}
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Typography fontSize={24} fontWeight="bold" textAlign="center">
+            Frequently Asked Questions
+          </Typography>
+          <Grid container spacing={3} px={6} py={2} mt={1}>
+            <Grid xs={12} sm={12} md={2.4} lg={2.4} xl={2.4} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                p={2}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                  px={4}
+                  py={2}
+                >
+                  <Typography sx={{ marginLeft: "4px" }}>
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={2.4} lg={2.4} xl={2.4} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                  py={2}
+                  px={4}
+                >
+                  <Typography sx={{ marginLeft: "4px" }}>
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={2.4} lg={2.4} xl={2.4} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                  py={2}
+                  px={4}
+                >
+                  <Typography sx={{ marginLeft: "4px" }}>
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={2.4} lg={2.4} xl={2.4} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                  py={2}
+                  px={4}
+                >
+                  <Typography sx={{ marginLeft: "4px" }}>
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={2.4} lg={2.4} xl={2.4} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                  py={2}
+                  px={4}
+                >
+                  <Typography sx={{ marginLeft: "4px" }}>
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                </Box>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box>
+          <Grid container spacing={2} px={6} py={2} mt={1}>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "white" }}
+                p={2}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                  px={4}
+                  pt={2}
+                >
+                  <Typography
+                    sx={{ marginLeft: "4px" }}
+                    fontSize={16}
+                    fontWeight="bold"
+                  >
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                  <ArrowCircleLeftRoundedIcon />
+                </Box>
+                <Typography
+                  sx={{ marginLeft: "4px" }}
+                  fontSize={12}
+                  px={4}
+                  pb={2}
+                >
+                  Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur,
+                  adipisicing elit. Ipsum, fuga.
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "white" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                  pt={2}
+                  px={4}
+                >
+                  <Typography
+                    sx={{ marginLeft: "4px" }}
+                    fontSize={16}
+                    fontWeight="bold"
+                  >
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                  <ArrowCircleLeftRoundedIcon />
+                </Box>
+                <Typography
+                  sx={{ marginLeft: "4px" }}
+                  fontSize={12}
+                  px={4}
+                  pb={2}
+                >
+                  Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Eveniet, alias!
+                </Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid container spacing={2} px={6} py={2}>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                p={2}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                  px={4}
+                  py={2}
+                >
+                  <Typography
+                    sx={{ marginLeft: "4px" }}
+                    fontSize={16}
+                    fontWeight="bold"
+                  >
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                  <ArrowCircleLeftRoundedIcon />
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                  py={2}
+                  px={4}
+                >
+                  <Typography
+                    sx={{ marginLeft: "4px" }}
+                    fontSize={16}
+                    fontWeight="bold"
+                  >
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                  <ArrowCircleLeftRoundedIcon />
+                </Box>
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid container spacing={2} px={6} py={2}>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                p={2}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                  px={4}
+                  py={2}
+                >
+                  <Typography
+                    sx={{ marginLeft: "4px" }}
+                    fontSize={16}
+                    fontWeight="bold"
+                  >
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                  <ArrowCircleLeftRoundedIcon />
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                  py={2}
+                  px={4}
+                >
+                  <Typography
+                    sx={{ marginLeft: "4px" }}
+                    fontSize={16}
+                    fontWeight="bold"
+                  >
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                  <ArrowCircleLeftRoundedIcon />
+                </Box>
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid container spacing={2} px={6} py={2}>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+                p={2}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                  px={4}
+                  py={2}
+                >
+                  <Typography
+                    sx={{ marginLeft: "4px" }}
+                    fontSize={16}
+                    fontWeight="bold"
+                  >
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                  <ArrowCircleLeftRoundedIcon />
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} px={2}>
+              <Paper
+                elevation={3}
+                sx={{ borderRadius: "12px", backgroundColor: "#f0efef" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                  py={2}
+                  px={4}
+                >
+                  <Typography
+                    sx={{ marginLeft: "4px" }}
+                    fontSize={16}
+                    fontWeight="bold"
+                  >
+                    Lorem ipsum dolor sit.
+                  </Typography>
+                  <ArrowCircleLeftRoundedIcon />
+                </Box>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box mx={4}>
+          <Paper
+            elevation={3}
+            style={{ borderRadius: "24px", backgroundColor: "white" }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+              px={4}
+              mt={2}
+              py={2}
+            >
+              <Typography fontSize={24} fontWeight="bold">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </Typography>
+              <Button variant="contained">See All</Button>
+            </Box>
+            <Box>
+              <Grid container spacing={2} px={2} py={2}>
+                <Grid xs={12} sm={12} md={3} lg={3} xl={3} px={2}>
+                  <Box
+                    component="img"
+                    src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                    alt="Example"
+                    sx={{
+                      width: "100%", // Set width
+                      height: 450, // Set height
+                      borderRadius: "8px", // Set border radius
+                      boxShadow: 2, // Set shadow
+                      objectFit: "cover", // Cover the box while keeping aspect ratio
+                      // Add other styles as needed
+                    }}
+                  />
+                </Grid>
+                <Grid xs={12} sm={12} md={3} lg={3} xl={3} px={2}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Typography
+                      sx={{ borderRadius: "12px", border: "1px solid black" }}
+                      px={2}
+                    >
+                      Tips
+                    </Typography>
+                    <Typography>July 07, 2024</Typography>
+                  </Box>
+                  <Typography mt={2} fontWeight="bold" fontSize={20}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores, ipsam quidem reprehenderit in accusamus veritatis
+                    aut at.
+                  </Typography>
+                  <Typography mt={2} fontSize={16}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores, ipsam quidem reprehenderit in accusamus veritatis
+                    aut at. Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Tempore, tenetur.
+                  </Typography>
+                  <Box sx={{ display: "flex", flexDirection: "row" }} mt={8}>
+                    <Typography sx={{ color: "green" }}>Read More</Typography>
+                    <ArrowOutwardIcon sx={{ color: "green" }} />
+                  </Box>
+                </Grid>
+                <Grid xs={12} sm={12} md={3} lg={3} xl={3} px={2}>
+                  <Box
+                    component="img"
+                    src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                    alt="Example"
+                    sx={{
+                      width: "100%", // Set width
+                      height: 200, // Set height
+                      borderRadius: "8px", // Set border radius
+                      boxShadow: 2, // Set shadow
+                      objectFit: "cover", // Cover the box while keeping aspect ratio
+                      // Add other styles as needed
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                    mt={2}
+                  >
+                    <Typography
+                      sx={{ borderRadius: "12px", border: "1px solid black" }}
+                      px={2}
+                    >
+                      Article
+                    </Typography>
+                    <Typography>July 07, 2024</Typography>
+                  </Box>
+                  <Typography mt={2} fontWeight="bold" fontSize={20}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit. Lorem ipsum dolor.
+                  </Typography>
+                  <Box sx={{ display: "flex", flexDirection: "row" }} mt={4}>
+                    <Typography sx={{ color: "green" }}>Read More</Typography>
+                    <ArrowOutwardIcon sx={{ color: "green" }} />
+                  </Box>
+                </Grid>
+                <Grid xs={12} sm={12} md={3} lg={3} xl={3} px={2}>
+                  <Box
+                    component="img"
+                    src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                    alt="Example"
+                    sx={{
+                      width: "100%", // Set width
+                      height: 200, // Set height
+                      borderRadius: "8px", // Set border radius
+                      boxShadow: 2, // Set shadow
+                      objectFit: "cover", // Cover the box while keeping aspect ratio
+                      // Add other styles as needed
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                    mt={2}
+                  >
+                    <Typography
+                      sx={{ borderRadius: "12px", border: "1px solid black" }}
+                      px={2}
+                    >
+                      Resources
+                    </Typography>
+                    <Typography>July 07, 2024</Typography>
+                  </Box>
+                  <Typography mt={2} fontWeight="bold" fontSize={20}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit. Lorem ipsum dolor.
+                  </Typography>
+                  <Box sx={{ display: "flex", flexDirection: "row" }} mt={4}>
+                    <Typography sx={{ color: "green" }}>Read More</Typography>
+                    <ArrowOutwardIcon sx={{ color: "green" }} />
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+          </Paper>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          my={3}
+        >
+          <Typography fontSize={24} fontWeight="bold">
+            {" "}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, cum?
+          </Typography>
+          <Box></Box>
+        </Box>
+        <Box px={4}>
+          <Grid
+            container
+            my={2}
+            spacing={2}
+            flexDirection={{
+              xs: "column",
+              sm: "column",
+              md: "row",
+              lg: "row",
+              xl: "row",
+            }}
+          >
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Box
+                component="img"
+                src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                alt="Example"
+                sx={{
+                  width: "100%", // Set width
+                  height: 500, // Set height
+                  borderRadius: "8px", // Set border radius
+                  boxShadow: 2, // Set shadow
+                  objectFit: "cover", // Cover the box while keeping aspect ratio
+                  // Add other styles as needed
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Box mx={6} mt={4}>
+                <Typography fontSize={20} fontWeight="bold">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores, laboriosam.
+                </Typography>
+                <Typography fontSize={16}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores, laboriosam. Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Labore, corrupti.
+                </Typography>
+              </Box>
+              <Box mx={6} mt={4}>
+                <Typography fontSize={20} fontWeight="bold">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores, laboriosam.
+                </Typography>
+                <Typography fontSize={16}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores, laboriosam. Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Labore, corrupti.
+                </Typography>
+              </Box>
+              <Box mx={6} mt={4}>
+                <Typography fontSize={20} fontWeight="bold">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores, laboriosam.
+                </Typography>
+                <Typography fontSize={16}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores, laboriosam. Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Labore, corrupti.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box mx={4}>
+          <Paper
+            elevation={3}
+            sx={{ borderRadius: "24px", backgroundColor: "white" }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              py={2}
+            >
+              <Typography fontSize={20} fontWeight="bold">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Commodi, soluta!
+              </Typography>
+            </Box>
+            <Box>
+              <Grid
+                container
+                my={2}
+                spacing={2}
+                flexDirection={{
+                  xs: "column",
+                  sm: "column",
+                  md: "row",
+                  lg: "row",
+                  xl: "row",
+                }}
+              >
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                  <Box px={2}>
+                    <Paper
+                      elevation={3}
+                      sx={{ borderRadius: "24px", backgroundColor: "#f0efef" }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "flex-start",
+                        }}
+                        py={2}
+                        px={4}
+                      >
+                        <Box
+                          component="img"
+                          src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                          alt="Example"
+                          sx={{
+                            width: 60, // Set width
+                            height: 60, // Set height
+                            borderRadius: "8px", // Set border radius
+                            boxShadow: 2, // Set shadow
+                            objectFit: "cover", // Cover the box while keeping aspect ratio
+                            // Add other styles as needed
+                          }}
+                        />
+                        <Box mx={2}>
+                          <Typography fontSize={20} fontWeight="bold">
+                            Lorem ipsum dolor sit amet consectetur
+                          </Typography>
+                          <Typography fontSize={16}>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box my={3} px={4} py={2}>
+                        <Button variant="contained">Contained</Button>
+                      </Box>
+                    </Paper>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                  <Box px={2}>
+                    <Paper
+                      elevation={3}
+                      sx={{ borderRadius: "24px", backgroundColor: "#f0efef" }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "flex-start",
+                        }}
+                        py={2}
+                        px={4}
+                      >
+                        <Box
+                          component="img"
+                          src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                          alt="Example"
+                          sx={{
+                            width: 60, // Set width
+                            height: 60, // Set height
+                            borderRadius: "8px", // Set border radius
+                            boxShadow: 2, // Set shadow
+                            objectFit: "cover", // Cover the box while keeping aspect ratio
+                            // Add other styles as needed
+                          }}
+                        />
+                        <Box mx={2}>
+                          <Typography fontSize={20} fontWeight="bold">
+                            Lorem ipsum dolor sit amet consectetur
+                          </Typography>
+                          <Typography fontSize={16}>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box my={3} px={4} py={2}>
+                        <Button variant="contained">Contained</Button>
+                      </Box>
+                    </Paper>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+            <Box>
+              <Grid
+                container
+                spacing={2}
+                flexDirection={{
+                  xs: "column",
+                  sm: "column",
+                  md: "row",
+                  lg: "row",
+                  xl: "row",
+                }}
+              >
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                  <Box px={2}>
+                    <Paper
+                      elevation={3}
+                      sx={{ borderRadius: "24px", backgroundColor: "#f0efef" }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "flex-start",
+                        }}
+                        py={2}
+                        px={4}
+                      >
+                        <Box
+                          component="img"
+                          src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                          alt="Example"
+                          sx={{
+                            width: 60, // Set width
+                            height: 60, // Set height
+                            borderRadius: "8px", // Set border radius
+                            boxShadow: 2, // Set shadow
+                            objectFit: "cover", // Cover the box while keeping aspect ratio
+                            // Add other styles as needed
+                          }}
+                        />
+                        <Box mx={2}>
+                          <Typography fontSize={20} fontWeight="bold">
+                            Lorem ipsum dolor sit amet consectetur
+                          </Typography>
+                          <Typography fontSize={16}>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box my={3} px={4} py={2}>
+                        <Button variant="contained">Contained</Button>
+                      </Box>
+                    </Paper>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                  <Box px={2}>
+                    <Paper
+                      elevation={3}
+                      sx={{ borderRadius: "24px", backgroundColor: "#f0efef" }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "flex-start",
+                        }}
+                        py={2}
+                        px={4}
+                      >
+                        <Box
+                          component="img"
+                          src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                          alt="Example"
+                          sx={{
+                            width: 60, // Set width
+                            height: 60, // Set height
+                            borderRadius: "8px", // Set border radius
+                            boxShadow: 2, // Set shadow
+                            objectFit: "cover", // Cover the box while keeping aspect ratio
+                            // Add other styles as needed
+                          }}
+                        />
+                        <Box mx={2}>
+                          <Typography fontSize={20} fontWeight="bold">
+                            Lorem ipsum dolor sit amet consectetur
+                          </Typography>
+                          <Typography fontSize={16}>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                          }}
+                          mt={2}
+                          px={4}
+                        >
+                          <TaskAltIcon />
+                          <Typography mx={1}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box my={3} px={4} py={2}>
+                        <Button variant="contained">Contained</Button>
+                      </Box>
+                    </Paper>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+          </Paper>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+          mx={4}
+          my={2}
+        >
+          <Typography fontSize={20} fontWeight="bold">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </Typography>
+          <Button variant="contained">Contained</Button>
+        </Box>
+        <Box>
+          <Grid container spacing={2} px={2} py={2}>
+            <Grid xs={12} sm={12} md={4} lg={4} xl={4} px={2}>
+              <Paper
+                elevation={3}
+                sx={{
+                  borderRadius: "24px",
+                  backgroundColor: "white",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                  alt="Example"
+                  sx={{
+                    width: "50%", // Set width
+                    height: 200, // Set height
+                    borderRadius: "50%", // Set border radius
+                    boxShadow: 2, // Set shadow
+                    objectFit: "cover", // Cover the box while keeping aspect ratio
+                    // Add other styles as needed
+                  }}
+                  mt={2}
+                  mb={1}
+                />
+                <Box sx={{ width: "100%" }} px={2} my={2}>
+                  <Paper
+                    elevation={3}
+                    sx={{
+                      borderRadius: "24px",
+                      backgroundColor: "#f0efef",
+                      width: "100%",
+                    }}
+                    px={2}
+                  >
+                    <Box px={2} py={2}>
+                      <Typography fontSize={20} fontWeight="bold">
+                        Lorem ipsum dolor sit.
+                      </Typography>
+                      <Typography fontSize={16}>
+                        Lorem ipsum dolor sit.
+                      </Typography>
+                      <ArrowCircleLeftRoundedIcon />
+                    </Box>
+                  </Paper>
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={4} lg={4} xl={4} px={2}>
+              <Paper
+                elevation={3}
+                sx={{
+                  borderRadius: "24px",
+                  backgroundColor: "white",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                  alt="Example"
+                  sx={{
+                    width: "50%", // Set width
+                    height: 200, // Set height
+                    borderRadius: "50%", // Set border radius
+                    boxShadow: 2, // Set shadow
+                    objectFit: "cover", // Cover the box while keeping aspect ratio
+                    // Add other styles as needed
+                  }}
+                  mt={2}
+                  mb={1}
+                />
+                <Box sx={{ width: "100%" }} px={2} my={2}>
+                  <Paper
+                    elevation={3}
+                    sx={{
+                      borderRadius: "24px",
+                      backgroundColor: "#f0efef",
+                      width: "100%",
+                    }}
+                    px={2}
+                  >
+                    <Box px={2} py={2}>
+                      <Typography fontSize={20} fontWeight="bold">
+                        Lorem ipsum dolor sit.
+                      </Typography>
+                      <Typography fontSize={16}>
+                        Lorem ipsum dolor sit.
+                      </Typography>
+                      <ArrowCircleLeftRoundedIcon />
+                    </Box>
+                  </Paper>
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid xs={12} sm={12} md={4} lg={4} xl={4} px={2}>
+              <Paper
+                elevation={3}
+                sx={{
+                  borderRadius: "24px",
+                  backgroundColor: "white",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                  alt="Example"
+                  sx={{
+                    width: "50%", // Set width
+                    height: 200, // Set height
+                    borderRadius: "50%", // Set border radius
+                    boxShadow: 2, // Set shadow
+                    objectFit: "cover", // Cover the box while keeping aspect ratio
+                    // Add other styles as needed
+                  }}
+                  mt={2}
+                  mb={1}
+                />
+                <Box sx={{ width: "100%" }} px={2} my={2}>
+                  <Paper
+                    elevation={3}
+                    sx={{
+                      borderRadius: "24px",
+                      backgroundColor: "#f0efef",
+                      width: "100%",
+                    }}
+                    px={2}
+                  >
+                    <Box px={2} py={2}>
+                      <Typography fontSize={20} fontWeight="bold">
+                        Lorem ipsum dolor sit.
+                      </Typography>
+                      <Typography fontSize={16}>
+                        Lorem ipsum dolor sit.
+                      </Typography>
+                      <ArrowCircleLeftRoundedIcon />
+                    </Box>
+                  </Paper>
+                </Box>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box mt={3} ml={2}>
+          <Paper
+            elevation={3}
+            sx={{
+              borderTopLeftRadius: "24px",
+              borderBottomLeftRadius: "24px",
+              borderTopRightRadius: 0,
+              borderBottomRightRadius: 0,
+              backgroundColor: "black",
+            }}
+          >
+            <Box py={3} px={2}>
+              <Grid
+                container
+                my={2}
+                spacing={2}
+                flexDirection={{
+                  xs: "column",
+                  sm: "column",
+                  md: "row",
+                  lg: "row",
+                  xl: "row",
+                }}
+              >
+                <Grid item xs={12} sm={12} md={9} lg={9} xl={9} mt={6}>
+                  <Box px={6}>
+                    <Typography fontSize={24} fontWeight="bold" color="white">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Odit, aliquam. Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Nesciunt, perspiciatis.
+                    </Typography>
+                    <Typography fontSize={16} color="white" mt={4}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Odit, aliquam.
+                    </Typography>
+                  </Box>
+                  <Box
+                    my={4}
+                    px={6}
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Button variant="contained">Contained</Button>
+                    <Box mx={3} display="flex" alignItems="center">
+                      <Button sx={{ color: "white" }}>Contained</Button>
+                      <ArrowOutwardIcon sx={{ color: "white" }} />
+                    </Box>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={12} md={3} lg={3} xl={3}>
+                  <Box
+                    component="img"
+                    src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" // Replace with your image URL
+                    alt="Example"
+                    sx={{
+                      width: "90%", // Set width
+                      height: 350, // Set height
+                      borderRadius: "8px", // Set border radius
+                      boxShadow: 2, // Set shadow
+                      objectFit: "cover", // Cover the box while keeping aspect ratio
+                      // Add other styles as needed
+                    }}
+                  />
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                my={2}
+                spacing={2}
+                flexDirection={{
+                  xs: "column",
+                  sm: "column",
+                  md: "row",
+                  lg: "row",
+                  xl: "row",
+                }}
+              >
+                <Grid item xs={12} sm={6} md={6} lg={6} xl={6} mt={2}>
+                  <Box px={6}>
+                    <Typography fontSize={16} color="green" mt={2}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Odit, aliquam.
+                    </Typography>
+                    <Typography fontSize={16} color="green" mt={1}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Odit, aliquam.
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={12} md={2} lg={2} xl={2} px={2}>
+                  <Typography
+                    sx={{
+                      border: "1px solid white",
+                      color: "white",
+                      borderRadius: "24px",
+                    }}
+                    px={4}
+                    py={6}
+                    textAlign="center"
+                  >
+                    jkdsnjfe
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={12} md={2} lg={2} xl={2} px={2}>
+                  <Typography
+                    sx={{
+                      border: "1px solid white",
+                      color: "white",
+                      borderRadius: "24px",
+                    }}
+                    px={4}
+                    py={6}
+                    textAlign="center"
+                  >
+                    jkdsnjfe
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={12} md={2} lg={2} xl={2} px={2}>
+                  <Typography
+                    sx={{
+                      border: "1px solid white",
+                      color: "white",
+                      borderRadius: "24px",
+                    }}
+                    px={4}
+                    py={6}
+                    textAlign="center"
+                  >
+                    jkdsnjfe
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Box>
+          </Paper>
+        </Box>
+        <Box mt={3} px={4}>
+          <Grid
+            container
+            my={2}
+            spacing={2}
+            flexDirection={{
+              xs: "column",
+              sm: "column",
+              md: "row",
+              lg: "row",
+              xl: "row",
+            }}
+          >
+            <Grid item xs={12} sm={12} md={4.5} lg={4.5} xl={4.5}>
+              <Typography fontSize={16} fontWeight="bold" color="green">
+                Omify
+              </Typography>
+              <Typography fontSize={16} mt={2}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                est reiciendis commodi officiis quibusdam quaerat ad, nostrum
+                modi vel neque?
+              </Typography>
+              <Box mt={3}>
+                <Paper
+                  elevation={3}
+                  sx={{ borderRadius: "12px", backgroundColor: "white" }}
+                >
+                  <Box
+                    sx={{ display: "flex", alignItems: "center" }}
+                    px={4}
+                    py={1}
+                  >
+                    <EmailIcon sx={{ color: 'green' }} />
+                    <Typography fontWeight="bold" mx={1}>Omify24@gmail.com</Typography>
+                  </Box>
+                </Paper>
+              </Box>
+              <Box mt={2}>
+                <Paper
+                  elevation={3}
+                  sx={{ borderRadius: "12px", backgroundColor: "white" }}
+                >
+                  <Box
+                    sx={{ display: "flex", alignItems: "center" }}
+                    px={4}
+                    py={1}
+                  >
+                    <LocalPhoneIcon sx={{ color: 'green' }} />
+                    <Typography fontWeight="bold" mx={1}>+919999999999</Typography>
+                  </Box>
+                </Paper>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={2.5} lg={2.5} xl={2.5}>
+              <Box px={4}>
+            <Typography
+           fontSize={20}
+           fontWeight="bold"
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+          </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={2.5} lg={2.5} xl={2.5}>
+              <Box px={4}>
+            <Typography
+           fontSize={20}
+           fontWeight="bold"
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+          </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={2.5} lg={2.5} xl={2.5}>
+              <Box px={4}>
+            <Typography
+           fontSize={20}
+           fontWeight="bold"
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+            <Typography
+           fontSize={16}
+           mt={1}
+          >
+           Company
+          </Typography>
+          </Box>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box mt={3}>
+          <Divider />
+          <Typography textAlign="center" mt={2}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, nam?</Typography>
+        </Box>
       </Box>
     </>
   );
